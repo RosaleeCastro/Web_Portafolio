@@ -1,5 +1,5 @@
 /* =========================================
-   1. RESET Y BASES (Inspiración Brittany Chiang)
+   1. RESET Y BASES 
    ========================================= */
 * {
   box-sizing: border-box;
@@ -108,24 +108,62 @@ nav ul {
   list-style: none;
   padding: 0;
   margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size:5px ;
 }
 
 nav li {
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 nav a {
-  color: inherit;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  color: rgba(216, 180, 254, 0.5);
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  transition: color 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
-nav a:hover {
-  color: var(--accent-strong);
+nav a::before {
+  content: "";
+  width: 42px;
+  height: 2px;
+  flex: 0 0 42px;
+  border-radius: 999px;
+  background: rgba(216, 180, 254, 0.32);
+  transition:
+    width 0.3s ease,
+    flex-basis 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--text-main);
+  transform: translateX(2px);
+}
+
+nav a:hover::before,
+nav a:focus-visible::before {
+  width: 82px;
+  flex-basis: 82px;
+  background: linear-gradient(90deg, #f8f5ff 0%, var(--accent-strong) 100%);
+  box-shadow: 0 0 18px rgba(232, 121, 249, 0.35);
+}
+
+nav a:focus-visible {
+  outline: none;
 }
 
 /* Columna Derecha: SCROLLABLE */
@@ -307,6 +345,11 @@ article h3 {
   object-fit: contain;
   image-rendering: -webkit-optimize-contrast;
   filter: drop-shadow(0 8px 18px color-mix(in srgb, var(--card-accent) 22%, transparent));
+}
+
+.tech-icon img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .tech-card h3 {
