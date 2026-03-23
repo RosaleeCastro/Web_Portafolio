@@ -123,3 +123,9 @@ window.onload = function () {
     cuerpo.style.filter = filtros;
   }
 };
+
+// Efecto de resplandor de fondo
+document.addEventListener("mousemove", (e) => {
+  const body = document.body;
+  body.style.background = `radial-gradient(600px at ${e.clientX}px ${e.clientY}px, rgba(232, 121, 249, 0.18), transparent 80%), linear-gradient(180deg, #24103a 0%, #16081f 58%, #0d0613 100%)`;
+});

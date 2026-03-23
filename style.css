@@ -1,44 +1,226 @@
+/* =========================================
+   1. RESET Y BASES (Inspiración Brittany Chiang)
+   ========================================= */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-base: #16081f;
+  --bg-deep: #24103a;
+  --bg-soft: #341857;
+  --panel: rgba(73, 33, 116, 0.32);
+  --panel-strong: rgba(98, 45, 153, 0.42);
+  --text-main: #f3e8ff;
+  --text-soft: #d8b4fe;
+  --accent: #c084fc;
+  --accent-strong: #e879f9;
+  --border-soft: rgba(232, 121, 249, 0.18);
+  --shadow: rgba(10, 2, 20, 0.45);
+}
+
 body {
   margin: 0;
-  font-family: inter;
-  background: #f5f5f5;
-  color: #333;
-}
-.container {
-  display: flex;
-  flex-direction: row;
-}
-
-header {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-  flex: 1;
+  padding: 0;
+  font-family: "Inter", sans-serif; /* Usando la fuente de tu index.html */
+  background:
+    radial-gradient(circle at top, rgba(192, 132, 252, 0.18), transparent 32%),
+    linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-base) 58%, #0d0613 100%);
+  color: var(--text-soft);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-main {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  flex: 8;
-}
-
-section {
-  background: white;
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 8px;
-}
-
+/* Títulos con mayor contraste */
 h1,
 h2,
 h3 {
+  color: var(--text-main);
   margin-top: 0;
+}
+
+/* =========================================
+   2. LAYOUT PRINCIPAL (EL SECRETO DEL STICKY)
+   ========================================= */
+.container {
+  display: flex;
+  flex-direction: row; /* Mantiene las dos columnas */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  align-items: flex-start; /* Evita que el header crezca con el main */
+  justify-content: flex-end;
+}
+
+/* Columna Izquierda: FIJA */
+header {
+  position: fixed;
+  top: 0;
+  left: max(50px, calc((100vw - 1200px) / 2 + 50px));
+  height: 100vh; /* Ocupa el alto de la ventana */
+  width: min(40vw, 420px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  padding: 80px 0;
+  background: transparent; /* Eliminamos el fondo negro de tu versión anterior */
+  text-align: left; /* Alineado a la izquierda como el referente */
+}
+
+.imagen_rct {
+  margin-top: 100px;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.imagen_rct img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+header p {
+  font-size: 1.2rem;
+  color: var(--text-soft);
+  max-width: 300px;
+}
+
+/* Navegación sutil */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+}
+
+nav li {
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav li:hover {
+  color: var(--accent-strong);
+}
+
+/* Columna Derecha: SCROLLABLE */
+main {
+  width: min(52vw, 580px);
+  padding: 100px 0;
+  flex: none; /* Sobrescribimos el flex: 8 previo para control exacto */
+}
+
+/* =========================================
+   3. COMPONENTES Y SECCIONES
+   ========================================= */
+section {
+  background: transparent; /* Limpio, sin cajas blancas */
+  margin-bottom: 120px;
+  padding: 0;
+}
+
+article {
+  padding: 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+}
+
+article:hover {
+  background: var(--panel);
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 16px 36px -18px var(--shadow);
+}
+
+article h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  background: #ddd;
+  padding: 40px;
+  background: transparent;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+/* =========================================
+   4. BARRA DE ACCESIBILIDAD (Tu código ajustado)
+   ========================================= */
+.jocarsa-accesibilidad {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--panel-strong);
+  backdrop-filter: blur(10px); /* Efecto cristal moderno */
+  border-radius: 50px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  z-index: 99999;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* */
+}
+
+.jocarsa-accesibilidad div {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  user-select: none;
+  color: white; /* Iconos visibles */
+}
+
+.jocarsa-accesibilidad div:hover {
+  background: rgba(232, 121, 249, 0.2);
+  transform: scale(1.1);
+}
+
+/* =========================================
+   5. RESPONSIVE (Móviles)
+   ========================================= */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    padding: 0 25px;
+    justify-content: flex-start;
+  }
+  header {
+    position: relative;
+    left: auto;
+    width: 100%;
+    height: auto;
+    padding: 60px 0 20px 0;
+  }
+  .imagen_rct {
+    width: 150px;
+    height: 150px;
+  }
+  main {
+    width: 100%;
+    padding: 40px 0;
+  }
 }
