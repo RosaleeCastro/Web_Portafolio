@@ -4,6 +4,7 @@
   right: 22px;
   padding: 10px 12px;
   display: flex;
+  flex-direction: column;
   gap: 10px;
   align-items: center;
   z-index: 99999;
@@ -71,6 +72,7 @@
     justify-content: center;
     flex-wrap: wrap;
     border-radius: 22px;
+    flex-direction: row;
   }
 }
 
