@@ -13,33 +13,121 @@
     <link rel="stylesheet" href="accesibilidad.css" />
     <script src="accesibilidad.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <script src="tecnologias.js" defer></script>
   </head>
   <body>
     <div class="container">
       <header>
         <div class="imagen_rct">
-          <img src="foto_sin_fondo_CV.png" alt="foto de perfil Rosalee Castro" />
+          <img src="/assets/foto_lila.png" alt="foto de perfil Rosalee" />
         </div>
         <h1>Rosalee Castro</h1>
         <p>Desarrollodora Junior | Fronted | Backend</p>
         <nav>
           <ul>
-            <li>Acerca de mí</li>
-            <li>Experiencia</li>
-            <li>Projectosen v</li>
+            <li><a href="#about">Acerca de mí</a></li>
+            <li><a href="#tech">Tecnologias</a></li>
+            <li><a href="#projects">Projectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
           </ul>
         </nav>
       </header>
       <main>
-        <section>
+        <section id="about">
           <h2>Sobre mí</h2>
           <p>
-            Bienvenido a mi web personal. Aquí comparto mis proyectos,
-            experiencia y formas de contacto.
+            Mi camino en el desarrollo web comenzó con la curiosidad por
+            entender cómo se construye la tecnología que usamos a diario. Como
+            estudiante de DAW, me dedico a construir soluciones que no solo
+            funcionen, sino que ofrezcan una experiencia de usuario excepcional.
+            <br />
+            Apasionada por el aprendizaje continuo, disfruto resolviendo retos
+            que involucren la conexión de datos y la arquitectura
+            cliente-servidor.
+            <br />
+            Mi objetivo es crecer paso a paso, integrando herramientas modernas
+            y IA práctica para construir aplicaciones eficientes y escalables.
+            <br />
+            Soy una colaboradora nata, siempre dispuesta a sumar en equipos
+            dinámicos.
           </p>
         </section>
 
-        <section>
+        <section class="skills-section" id="tech">
+          <div class="section-heading">
+            <h2>Tecnologias</h2>
+            <p>
+              Herramientas y lenguajes con los que construyo interfaces,
+              servidores, APIs y bases de datos.
+            </p>
+          </div>
+
+          <div class="tech-stack" id="tech-stack">
+            <article class="tech-card" data-accent="#f7df1e">
+              <div class="tech-icon tech-icon--logo">
+                <img
+                  src="assets/javascript-svgrepo-com.svg"
+                  alt="javascript"
+                />
+              </div>
+              <h3>JavaScript</h3>
+            </article>
+            <article class="tech-card" data-accent="#e34f26">
+              <div class="tech-icon tech-icon--logo">
+                <img src="assets/html-5-svgrepo-com.svg" alt="html" />
+              </div>
+              <h3>HTML</h3>
+            </article>
+            <article class="tech-card" data-accent="#1572b6">
+              <div class="tech-icon tech-icon--logo">
+                <img src="assets/css-3-svgrepo-com.svg" alt="css" />
+              </div>
+              <h3>CSS</h3>
+            </article>
+            <article class="tech-card" data-accent="#777bb4">
+              <div class="tech-icon">PHP</div>
+              <h3>PHP</h3>
+            </article>
+            <article class="tech-card" data-accent="#4479a1">
+              <div class="tech-icon">MY</div>
+              <h3>MySQL</h3>
+            </article>
+            <article class="tech-card" data-accent="#336791">
+              <div class="tech-icon">PG</div>
+              <h3>PostgreSQL</h3>
+            </article>
+            <article class="tech-card" data-accent="#f89820">
+              <div class="tech-icon">JV</div>
+              <h3>Java</h3>
+            </article>
+            <article class="tech-card" data-accent="#68a063">
+              <div class="tech-icon">ND</div>
+              <h3>Node.js</h3>
+            </article>
+            <article class="tech-card" data-accent="#47a248">
+              <div class="tech-icon">MG</div>
+              <h3>MongoDB</h3>
+            </article>
+            <article class="tech-card" data-accent="#61dafb">
+              <div class="tech-icon">RC</div>
+              <h3>React</h3>
+            </article>
+            <article class="tech-card" data-accent="#f3f4f6">
+              <div class="tech-icon">EX</div>
+              <h3>Express</h3>
+            </article>
+            <article class="tech-card" data-accent="#f05032">
+              <div class="tech-icon">GT</div>
+              <h3>Git</h3>
+            </article>
+            <article class="tech-card" data-accent="#007acc">
+              <div class="tech-icon">VS</div>
+              <h3>Visual Studio Code</h3>
+            </article>
+          </div>
+        </section>
+
+        <section id="projects">
           <h2>Proyectos</h2>
 
           <article>
@@ -58,7 +146,7 @@
           </article>
         </section>
 
-        <section>
+        <section id="contact">
           <h2>Contacto</h2>
           <p>Email: correo@ejemplo.com</p>
         </section>
