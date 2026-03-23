@@ -2,7 +2,7 @@ console.log("Vamos con la accesibilidad");
 
 window.onload = function () {
   let zoom = 1;
-  let invertido = false;
+  let modoClaro = false;
   let contraste = false;
   let fuenteGrande = false;
 
@@ -45,15 +45,16 @@ window.onload = function () {
   };
 
   // ------------------------
-  // INVERTIR COLORES
+  // CAMBIO DE TEMA
   // ------------------------
   let invertir = document.createElement("div");
-  invertir.textContent = "🧙‍♂️";
+  invertir.textContent = "☀";
+  invertir.title = "Cambiar tema";
   barra.appendChild(invertir);
 
   invertir.onclick = function () {
-    invertido = !invertido;
-    aplicarFiltros();
+    modoClaro = !modoClaro;
+    aplicarModos();
   };
 
   // ------------------------
@@ -61,11 +62,12 @@ window.onload = function () {
   // ------------------------
   let contrasteBtn = document.createElement("div");
   contrasteBtn.textContent = "⚫";
+  contrasteBtn.title = "Contraste alto";
   barra.appendChild(contrasteBtn);
 
   contrasteBtn.onclick = function () {
     contraste = !contraste;
-    aplicarFiltros();
+    aplicarModos();
   };
 
   // ------------------------
@@ -73,6 +75,7 @@ window.onload = function () {
   // ------------------------
   let fuenteBtn = document.createElement("div");
   fuenteBtn.textContent = "A";
+  fuenteBtn.title = "Fuente grande";
   barra.appendChild(fuenteBtn);
 
   fuenteBtn.onclick = function () {
@@ -92,40 +95,32 @@ window.onload = function () {
   // ------------------------
   let reset = document.createElement("div");
   reset.textContent = "↺";
+  reset.title = "Restablecer";
   barra.appendChild(reset);
 
   reset.onclick = function () {
     zoom = 1;
-    invertido = false;
+    modoClaro = false;
     contraste = false;
     fuenteGrande = false;
 
     cuerpo.style.zoom = 1;
-    cuerpo.style.filter = "";
     cuerpo.style.fontSize = "";
     cuerpo.style.lineHeight = "";
+    cuerpo.classList.remove("tema-claro", "modo-contraste", "fuente-grande");
   };
 
   // ------------------------
-  // FUNCIÓN FILTROS
+  // FUNCIÓN MODOS
   // ------------------------
-  function aplicarFiltros() {
-    let filtros = "";
-
-    if (invertido) {
-      filtros += " invert(1)";
-    }
-
-    if (contraste) {
-      filtros += " contrast(1.5)";
-    }
-
-    cuerpo.style.filter = filtros;
+  function aplicarModos() {
+    cuerpo.classList.toggle("tema-claro", modoClaro);
+    cuerpo.classList.toggle("modo-contraste", contraste);
   }
 };
 
 // Efecto de resplandor de fondo
 document.addEventListener("mousemove", (e) => {
   const body = document.body;
-  body.style.background = `radial-gradient(600px at ${e.clientX}px ${e.clientY}px, rgba(232, 121, 249, 0.18), transparent 80%), linear-gradient(180deg, #24103a 0%, #16081f 58%, #0d0613 100%)`;
+  body.style.background = `radial-gradient(600px at ${e.clientX}px ${e.clientY}px, var(--mouse-glow), transparent 80%), linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-base) 58%, var(--bg-tail) 100%)`;
 });
