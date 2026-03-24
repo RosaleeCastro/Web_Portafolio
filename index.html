@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mi web personal</title>
+    <title>Rosalee Castro | Desarrolladora Web</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,12 +22,16 @@
           <img src="/assets/foto_lila.png" alt="foto de perfil Rosalee" />
         </div>
         <h1>Rosalee Castro</h1>
-        <p>Desarrollodora Junior | Fronted | Backend</p>
+        <p>
+          Desarrolladora web junior enfocada en frontend, backend y experiencias
+          digitales cuidadas.
+        </p>
         <nav>
           <ul>
             <li><a href="#about">Acerca de mí</a></li>
             <li><a href="#tech">Tecnologias</a></li>
-            <li><a href="#projects">Projectos</a></li>
+            <li><a href="#projects">Portafolio</a></li>
+            <li><a href="#blog">Blog</a></li>
             <li><a href="#contact">Contacto</a></li>
           </ul>
         </nav>
@@ -42,22 +46,28 @@
       <main>
         <section id="about">
           <h2>Sobre mí</h2>
-          <p>
-            Mi camino en el desarrollo web comenzó con la curiosidad por
-            entender cómo se construye la tecnología que usamos a diario. Como
-            estudiante de DAW, me dedico a construir soluciones que no solo
-            funcionen, sino que ofrezcan una experiencia de usuario excepcional.
-            <br />
-            Apasionada por el aprendizaje continuo, disfruto resolviendo retos
-            que involucren la conexión de datos y la arquitectura
-            cliente-servidor.
-            <br />
-            Mi objetivo es crecer paso a paso, integrando herramientas modernas
-            y IA práctica para construir aplicaciones eficientes y escalables.
-            <br />
-            Soy una colaboradora nata, siempre dispuesta a sumar en equipos
-            dinámicos.
-          </p>
+          <div class="intro-panel">
+            <p class="intro-lead">
+              Construyo interfaces limpias, funcionalidades utiles y proyectos
+              que conectan diseno, logica y datos.
+            </p>
+            <p>
+              Mi camino en el desarrollo web comenzo con la curiosidad por
+              entender como se construye la tecnologia que usamos a diario. Como
+              estudiante de DAW, disfruto crear productos digitales que
+              funcionen bien y se sientan claros para quien los utiliza.
+            </p>
+            <p>
+              Me interesa especialmente trabajar en aplicaciones web completas:
+              desde la experiencia visual en frontend hasta la logica de
+              negocio, APIs y bases de datos en backend.
+            </p>
+            <p>
+              Sigo aprendiendo de forma constante, experimentando con
+              herramientas modernas e incorporando IA practica para desarrollar
+              soluciones eficientes, accesibles y escalables.
+            </p>
+          </div>
         </section>
 
         <section class="skills-section" id="tech">
@@ -146,27 +156,169 @@
         </section>
 
         <section id="projects">
-          <h2>Proyectos</h2>
+          <div class="section-heading">
+            <h2>Portafolio</h2>
+            <p>
+              Una seleccion de trabajos donde practico maquetacion, logica,
+              integracion de datos y experiencia de usuario.
+            </p>
+          </div>
 
-          <article>
-            <h3>Proyecto 1</h3>
-            <p>Descripción breve del proyecto.</p>
-          </article>
+          <div class="project-list">
+            <article class="content-card project-card">
+              <span class="eyebrow">Frontend + UI</span>
+              <h3>Ticket Flow</h3>
+              <p>
+                SaaS de gestión de incidencias pensado para técnicos y pequeñas
+                empresas, centralizando tickets, prioridades, seguimiento y
+                responsables en una sola plataforma. Este proyecto refleja un
+                caso de uso empresarial real y demuestra desarrollo full stack,
+                roles, automatizaciones, dashboard e integraciones de alto valor
+                para un entorno profesional.
+              </p>
 
-          <article>
-            <h3>Proyecto 2</h3>
-            <p>Descripción breve del proyecto.</p>
-          </article>
+              <ul class="tag-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </article>
 
-          <article>
-            <h3>Proyecto 3</h3>
-            <p>Descripción breve del proyecto.</p>
-          </article>
+            <article class="content-card project-card">
+              <span class="eyebrow">Backend + Datos</span>
+              <h3>Gestor de tareas con API</h3>
+              <p>
+                Aplicacion para organizar tareas con operaciones CRUD,
+                validaciones y conexion entre cliente, servidor y base de datos.
+              </p>
+              <ul class="tag-list">
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+              </ul>
+            </article>
+
+            <article class="content-card project-card">
+              <span class="eyebrow">Full Stack</span>
+              <h3>Panel de catalogo digital</h3>
+              <p>
+                Proyecto orientado a mostrar productos o contenido dinamico con
+                filtros, estructura reutilizable y panel visual claro.
+              </p>
+              <ul class="tag-list">
+                <li>React</li>
+                <li>API REST</li>
+                <li>PostgreSQL</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="blog">
+          <div class="section-heading">
+            <h2>Blog</h2>
+            <p>
+              Un espacio para compartir aprendizajes, ideas de desarrollo y
+              pequenas notas sobre mi proceso como programadora.
+            </p>
+          </div>
+
+          <div class="blog-grid">
+            <article class="content-card blog-card">
+              <span class="eyebrow">Notas de codigo</span>
+              <h3>Lo que aprendi creando componentes reutilizables</h3>
+              <p>
+                Reflexiones sobre estructura, consistencia visual y como pensar
+                una interfaz para que crezca sin perder claridad.
+              </p>
+              <a href="#" class="text-link">Leer entrada</a>
+            </article>
+
+            <article class="content-card blog-card">
+              <span class="eyebrow">Backend diario</span>
+              <h3>Primeros pasos conectando frontend, API y base de datos</h3>
+              <p>
+                Una mirada practica a los retos de validar datos, organizar
+                endpoints y mantener el flujo de la aplicacion entendible.
+              </p>
+              <a href="#" class="text-link">Leer entrada</a>
+            </article>
+
+            <article class="content-card blog-card">
+              <span class="eyebrow">Carrera tech</span>
+              <h3>Como estoy construyendo mi perfil como desarrolladora</h3>
+              <p>
+                Proyectos, habitos y decisiones que me ayudan a crecer paso a
+                paso mientras consolido una base tecnica solida.
+              </p>
+              <a href="#" class="text-link">Leer entrada</a>
+            </article>
+          </div>
         </section>
 
         <section id="contact">
-          <h2>Contacto</h2>
-          <p>Email: rosalee.castrot@gmail.com</p>
+          <div class="section-heading">
+            <h2>Contacto</h2>
+            <p>
+              Si quieres colaborar, hablar sobre una oportunidad o comentar un
+              proyecto, puedes escribirme aqui.
+            </p>
+          </div>
+
+          <div class="contact-layout">
+            <article class="content-card contact-card">
+              <span class="eyebrow">Disponible para colaborar</span>
+              <h3>Hablemos de tu idea</h3>
+              <p>
+                Me interesa participar en proyectos web donde pueda aportar en
+                interfaz, desarrollo full stack y mejora de experiencia de
+                usuario.
+              </p>
+              <div class="contact-links">
+                <a href="mailto:rosalee.castrot@gmail.com"
+                  >rosalee.castrot@gmail.com</a
+                >
+                <a href="#">LinkedIn profesional</a>
+                <a href="#">GitHub proyectos</a>
+              </div>
+            </article>
+
+            <form class="contact-form">
+              <label for="nombre">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu nombre"
+              />
+
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="tu@email.com"
+              />
+
+              <label for="asunto">Asunto</label>
+              <input
+                type="text"
+                id="asunto"
+                name="asunto"
+                placeholder="Cuéntame de qué se trata"
+              />
+
+              <label for="mensaje">Mensaje</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="6"
+                placeholder="Escribe tu mensaje aquí"
+              ></textarea>
+
+              <button type="submit">Enviar mensaje</button>
+            </form>
+          </div>
         </section>
       </main>
     </div>
