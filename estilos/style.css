@@ -460,6 +460,59 @@ article h3 {
   color: var(--text-main);
 }
 
+.project-card__media {
+  --card-accent: #f97316;
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 250px;
+  margin: 14px 0 16px;
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.01)
+    ),
+    color-mix(in srgb, var(--bg-base) 58%, black 42%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03),
+    0 18px 40px -28px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+}
+
+.project-card__media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--card-accent) 72%, white 28%),
+    rgba(232, 121, 249, 0.7)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+.project-card__image {
+  width: min(100%, 320px);
+  max-height: 190px;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 8px;
+  background: transparent;
+}
+
 .tag-list {
   list-style: none;
   display: flex;

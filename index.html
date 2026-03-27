@@ -183,6 +183,13 @@
             <article class="content-card project-card">
               <span class="eyebrow">Frontend + UI</span>
               <h3>Ticket Flow</h3>
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="/assets/ticket_flow_img.png"
+                  alt="imagen de ticket flow"
+                />
+              </div>
               <p>
                 SaaS de gestión de incidencias pensado para técnicos y pequeñas
                 empresas, centralizando tickets, prioridades, seguimiento y
@@ -255,9 +262,7 @@
                 Reflexiones sobre estructura, consistencia visual y como pensar
                 una interfaz para que crezca sin perder claridad.
               </p>
-              <a
-                href="blog/componentes-reutilizables.html"
-                class="text-link"
+              <a href="blog/componentes-reutilizables.html" class="text-link"
                 >Leer entrada</a
               >
             </article>
@@ -269,9 +274,7 @@
                 Una mirada practica a los retos de validar datos, organizar
                 endpoints y mantener el flujo de la aplicacion entendible.
               </p>
-              <a
-                href="blog/frontend-api-base-datos.html"
-                class="text-link"
+              <a href="blog/frontend-api-base-datos.html" class="text-link"
                 >Leer entrada</a
               >
             </article>
@@ -319,13 +322,14 @@
               </div>
             </article>
 
-            <form class="contact-form">
+            <form class="contact-form" action="insertar.php"  >
               <label for="nombre">Nombre</label>
               <input
                 type="text"
                 id="nombre"
                 name="nombre"
                 placeholder="Tu nombre"
+                required
               />
 
               <label for="email">Email</label>
@@ -334,6 +338,7 @@
                 id="email"
                 name="email"
                 placeholder="tu@email.com"
+                required
               />
 
               <label for="asunto">Asunto</label>
