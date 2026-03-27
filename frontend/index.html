@@ -10,16 +10,16 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/estilos/style.css" />
-    <script src="/script/accesibilidad.js"></script>
-    <link rel="stylesheet" href="/estilos/accesibilidad.css" />
-    <script src="/script/tecnologias.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/accesibilidad.js"></script>
+    <link rel="stylesheet" href="styles/accesibilidad.css" />
+    <script src="scripts/tecnologias.js" defer></script>
   </head>
   <body>
     <div class="container">
       <header>
         <div class="imagen_rct">
-          <img src="/assets/foto_lila.png" alt="foto de perfil Rosalee" />
+          <img src="assets/images/foto_lila.png" alt="foto de perfil Rosalee" />
         </div>
         <h1>Rosalee Castro</h1>
         <p>
@@ -97,73 +97,73 @@
           <div class="tech-stack" id="tech-stack">
             <article class="tech-card" data-accent="#f7df1e">
               <div class="tech-icon tech-icon--logo">
-                <img src="assets/javascript-svgrepo-com.svg" alt="javascript" />
+                <img src="assets/icons/javascript-svgrepo-com.svg" alt="javascript" />
               </div>
               <h3>JavaScript</h3>
             </article>
             <article class="tech-card" data-accent="#e34f26">
               <div class="tech-icon tech-icon--logo">
-                <img src="assets/html-5-svgrepo-com.svg" alt="html" />
+                <img src="assets/icons/html-5-svgrepo-com.svg" alt="html" />
               </div>
               <h3>HTML</h3>
             </article>
             <article class="tech-card" data-accent="#1572b6">
               <div class="tech-icon tech-icon--logo">
-                <img src="assets/css-3-svgrepo-com.svg" alt="css" />
+                <img src="assets/icons/css-3-svgrepo-com.svg" alt="css" />
               </div>
               <h3>CSS</h3>
             </article>
             <article class="tech-card" data-accent="#777bb4">
               <div class="tech-icon tech-icon--logo">
-                <img src="assets/php-svgrepo-com.svg" alt="php" />
+                <img src="assets/icons/php-svgrepo-com.svg" alt="php" />
               </div>
               <h3>PHP</h3>
             </article>
             <article class="tech-card" data-accent="#4479a1">
               <div class="tech-icon tech-icon--logo">
-                <img src="assets/mysql-svgrepo-com.svg" alt="mysql" />
+                <img src="assets/icons/mysql-svgrepo-com.svg" alt="mysql" />
               </div>
               <h3>MySQL</h3>
             </article>
             <article class="tech-card" data-accent="#336791">
               <div class="tech-icon tech-icon--logo">
-                <img src="assets/postgresql-svgrepo-com.svg" alt="Postgresql" />
+                <img src="assets/icons/postgresql-svgrepo-com.svg" alt="Postgresql" />
               </div>
               <h3>PostgreSQL</h3>
             </article>
             <article class="tech-card" data-accent="#f89820">
               <div class="tech-icon tech-icon--logo">
-                <img src="assets/java-svgrepo-com.svg" alt="Java" />
+                <img src="assets/icons/java-svgrepo-com.svg" alt="Java" />
               </div>
               <h3>Java</h3>
             </article>
             <article class="tech-card" data-accent="#68a063">
               <div class="tech-icon tech-icon--logo">
-                <img src="assets/nodejs-svgrepo-com.svg" alt="nodejs" />
+                <img src="assets/icons/nodejs-svgrepo-com.svg" alt="nodejs" />
               </div>
               <h3>Node.js</h3>
             </article>
             <article class="tech-card" data-accent="#47a248">
               <div class="tech-icon tech-icon--logo">
-                <img src="assets/mongodb-svgrepo-com.svg" alt="mongodb" />
+                <img src="assets/icons/mongodb-svgrepo-com.svg" alt="mongodb" />
               </div>
               <h3>MongoDB</h3>
             </article>
             <article class="tech-card" data-accent="#61dafb">
               <div class="tech-icon tech-icon--logo">
-                <img src="assets/react-svgrepo-com.svg" alt="react" />
+                <img src="assets/icons/react-svgrepo-com.svg" alt="react" />
               </div>
               <h3>React</h3>
             </article>
             <article class="tech-card" data-accent="#f3f4f6">
               <div class="tech-icon tech-icon--logo">
-                <img src="assets/express-svgrepo-com.svg" alt="express" />
+                <img src="assets/icons/express-svgrepo-com.svg" alt="express" />
               </div>
               <h3>Express</h3>
             </article>
             <article class="tech-card" data-accent="#f05032">
               <div class="tech-icon tech-icon--logo">
-                <img src="assets/git-svgrepo-com.svg" alt="git" />
+                <img src="assets/icons/git-svgrepo-com.svg" alt="git" />
               </div>
               <h3>Git</h3>
             </article>
@@ -186,7 +186,7 @@
               <div class="project-card__media">
                 <img
                   class="project-card__image"
-                  src="/assets/ticket_flow_img.png"
+                  src="assets/images/ticket_flow_img.png"
                   alt="imagen de ticket flow"
                 />
               </div>
@@ -322,7 +322,7 @@
               </div>
             </article>
 
-            <form class="contact-form" action="insertar.php"  >
+            <form class="contact-form" action="../backend/handlers/insertar.php" method="post">
               <label for="nombre">Nombre</label>
               <input
                 type="text"
