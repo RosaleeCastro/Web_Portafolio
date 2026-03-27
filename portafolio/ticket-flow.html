@@ -13,23 +13,159 @@
     <link rel="stylesheet" href="../estilos/construccion.css" />
     <link rel="stylesheet" href="../estilos/accesibilidad.css" />
     <script src="../script/accesibilidad.js" defer></script>
+    <style>
+      .project-video {
+        width: min(900px, 100%);
+        display: block;
+        margin: 1.5rem auto 0;
+        border-radius: 10px;
+      }
+
+      .project-video video {
+        width: 100%;
+        display: block;
+        border-radius: 8px;
+      }
+
+      .project-summary {
+        margin-top: 1.5rem;
+      }
+
+      .project-summary h2 {
+        margin: 0 0 0.75rem;
+        font-size: clamp(1.15rem, 2vw, 1.5rem);
+      }
+
+      .project-summary p {
+        margin-bottom: 0.9rem;
+      }
+
+      .project-summary details {
+        border-top: 1px solid var(--border-soft);
+        padding-top: 0.9rem;
+      }
+
+      .project-summary summary {
+        cursor: pointer;
+        color: var(--accent-strong);
+        font-weight: 700;
+        list-style: none;
+      }
+
+      .project-summary summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .project-summary summary::after {
+        content: " +";
+      }
+
+      .project-summary details[open] summary::after {
+        content: " -";
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.85rem 1.1rem;
+        border: 1px solid var(--border-soft);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--text-main);
+        text-decoration: none;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease,
+          background-color 0.25s ease,
+          color 0.25s ease;
+      }
+
+      .back-link::before {
+        content: "<";
+        color: var(--accent-strong);
+        font-size: 0.95rem;
+      }
+
+      .back-link:hover,
+      .back-link:focus-visible {
+        transform: translateX(-2px);
+        border-color: var(--accent);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--accent-strong);
+        outline: none;
+      }
+
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.4rem;
+        color: var(--accent-strong);
+        text-decoration: none;
+        font-weight: 700;
+        border-bottom: 1px solid transparent;
+        transition:
+          color 0.25s ease,
+          border-color 0.25s ease,
+          transform 0.25s ease;
+      }
+
+      .project-link::after {
+        content: ">";
+        font-size: 0.9rem;
+      }
+
+      .project-link:hover,
+      .project-link:focus-visible {
+        color: var(--text-main);
+        border-color: var(--accent);
+        transform: translateX(2px);
+        outline: none;
+      }
+    </style>
   </head>
   <body>
     <main>
       <section class="construction-card">
         <span class="eyebrow">Proyecto de portafolio</span>
         <h1>Ticket Flow</h1>
-        <span class="construction-badge">Caso de estudio en construccion</span>
-        <p>
-          Esta pagina servira para mostrar el contexto del proyecto, objetivos,
-          stack, capturas, decisiones tecnicas y resultados.
-        </p>
-        <p>
-          Por ahora queda preparada como placeholder para que no tengas que
-          rehacer la estructura mas adelante.
-        </p>
+        <span class="construction-badge">Video Fase: Cliente </span>
+        <div class="project-video">
+          <video controls preload="metadata">
+            <source src="../assets/ticket_flow.mp4" type="video/mp4" />
+            Tu navegador no soporta la reproduccion de video.
+          </video>
+        </div>
+        <section class="project-summary" aria-labelledby="ticket-flow-resumen">
+          <h2 id="ticket-flow-resumen">Resumen del proyecto</h2>
+          <p>
+            Ticket Flow es una plataforma pensada para que clientes y equipos de
+            soporte gestionen incidencias con mas claridad, seguimiento y orden.
+            Esta primera fase se centra en la experiencia del cliente.
+          </p>
+          <details>
+            <summary>Leer mas</summary>
+            <p>
+              El objetivo es construir una base escalable para incorporar panel
+              tecnico, administracion, prioridades, historial, notificaciones e
+              integraciones reales sin perder simplicidad en el uso.
+            </p>
+            <a
+              class="project-link"
+              href="https://www.linkedin.com/posts/rosaleecastrotoribio_desarrolloweb-daw-php-activity-7442903335202000897-KNBk?utm_source=share&utm_medium=member_desktop&rcm=ACoAAElZ03EBIi-b4bxWPIPldsg6qTxCauguou0"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span>LinkedIn Post</span></a
+            >
+          </details>
+        </section>
         <div class="actions">
-          <a class="button-link button-link--primary" href="../index.html">Volver al inicio</a>
+          <a class="back-link" href="../index.html"
+            >Volver al inicio</a
+          >
         </div>
       </section>
     </main>
