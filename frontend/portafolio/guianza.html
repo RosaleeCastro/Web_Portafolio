@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GuIAnça | Proyecto TFG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/construccion.css" />
+    <link rel="stylesheet" href="../styles/accesibilidad.css" />
+    <script src="../scripts/accesibilidad.js" defer></script>
+    <style>
+      .project-hero {
+        --card-accent: #8b5cf6;
+        align-items: start;
+        min-height: 220px;
+        padding: 28px;
+        background:
+          radial-gradient(circle at top left, rgba(232, 121, 249, 0.18), transparent 34%),
+          radial-gradient(circle at bottom right, rgba(245, 158, 11, 0.14), transparent 28%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
+          color-mix(in srgb, var(--bg-base) 62%, black 38%);
+      }
+
+      .hero-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--text-main);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .hero-copy {
+        max-width: 48ch;
+        margin: 0;
+        color: var(--text-main);
+      }
+
+      .project-summary {
+        margin-top: 1.5rem;
+      }
+
+      .project-summary h2 {
+        margin: 0 0 0.75rem;
+        font-size: clamp(1.15rem, 2vw, 1.5rem);
+      }
+
+      .project-summary p {
+        margin-bottom: 0.9rem;
+      }
+
+      .stack-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 1rem 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .stack-list li {
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--border-soft);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text-main);
+        font-size: 0.85rem;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.85rem 1.1rem;
+        border: 1px solid var(--border-soft);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--text-main);
+        text-decoration: none;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease,
+          background-color 0.25s ease,
+          color 0.25s ease;
+      }
+
+      .back-link::before {
+        content: "<";
+        color: var(--accent-strong);
+        font-size: 0.95rem;
+      }
+
+      .back-link:hover,
+      .back-link:focus-visible {
+        transform: translateX(-2px);
+        border-color: var(--accent);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--accent-strong);
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="construction-card">
+        <span class="eyebrow">TFG · EdTech + IA</span>
+        <h1>GuIAnça</h1>
+        <span class="construction-badge"
+          >Ecosistema de Aprendizaje Hiper-personalizado</span
+        >
+
+        <div class="project-hero">
+          <div class="hero-badges">
+            <span class="hero-badge">Alumno</span>
+            <span class="hero-badge">Maestro</span>
+            <span class="hero-badge">Admin</span>
+          </div>
+          <p class="hero-copy">
+            Una WebApp educativa que combina IA, clases en vivo y seguimiento
+            del progreso para ayudar al alumno a aprender y cumplir metas reales.
+          </p>
+        </div>
+
+        <section class="project-summary" aria-labelledby="guianza-resumen">
+          <h2 id="guianza-resumen">Resumen del proyecto</h2>
+          <p>
+            GuIAnça nace como mi propuesta de TFG: una plataforma donde el
+            aprendizaje no sea pasivo, sino guiado, medible y personalizado.
+          </p>
+          <p>
+            El sistema se apoya en tres dashboards conectados, integracion con
+            IA para generar apoyo academico y una base tecnica preparada para
+            crecer con PHP, MySQL y JavaScript.
+          </p>
+
+          <ul class="stack-list" aria-label="Tecnologias del proyecto">
+            <li>PHP</li>
+            <li>MySQL</li>
+            <li>JavaScript</li>
+            <li>OpenAI</li>
+            <li>Jitsi SDK</li>
+            <li>Google Calendar API</li>
+          </ul>
+        </section>
+
+        <div class="actions">
+          <a class="back-link" href="../index.html">Volver al inicio</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

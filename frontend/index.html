@@ -97,7 +97,10 @@
           <div class="tech-stack" id="tech-stack">
             <article class="tech-card" data-accent="#f7df1e">
               <div class="tech-icon tech-icon--logo">
-                <img src="assets/icons/javascript-svgrepo-com.svg" alt="javascript" />
+                <img
+                  src="assets/icons/javascript-svgrepo-com.svg"
+                  alt="javascript"
+                />
               </div>
               <h3>JavaScript</h3>
             </article>
@@ -127,7 +130,10 @@
             </article>
             <article class="tech-card" data-accent="#336791">
               <div class="tech-icon tech-icon--logo">
-                <img src="assets/icons/postgresql-svgrepo-com.svg" alt="Postgresql" />
+                <img
+                  src="assets/icons/postgresql-svgrepo-com.svg"
+                  alt="Postgresql"
+                />
               </div>
               <h3>PostgreSQL</h3>
             </article>
@@ -180,8 +186,39 @@
           </div>
 
           <div class="project-list">
+            <article class="content-card project-card project-card--featured">
+              <span class="eyebrow">TFG · EdTech + IA</span>
+              <h3>GuIAnça · Ecosistema de Aprendizaje Hiper-personalizado</h3>
+              <div class="project-card__media project-card__media--guianza">
+                <div class="project-card__spotlight">
+                  <span class="project-card__badge">Alumno</span>
+                  <span class="project-card__badge">Maestro</span>
+                  <span class="project-card__badge">Admin</span>
+                </div>
+                <p class="project-card__media-copy">
+                  WebApp educativa pensada como asistente de vida academica con
+                  IA, seguimiento real del progreso y sincronizacion del estudio.
+                </p>
+              </div>
+              <p>
+                Mi TFG sobre una plataforma educativa con IA, clases en vivo y
+                seguimiento del progreso en tres dashboards conectados.
+              </p>
+              <ul class="tag-list">
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>JavaScript</li>
+                <li>OpenAI</li>
+                <li>Jitsi SDK</li>
+                <li>Google Calendar API</li>
+              </ul>
+              <a href="portafolio/guianza.html" class="text-link"
+                >Ver proyecto</a
+              >
+            </article>
+
             <article class="content-card project-card">
-              <span class="eyebrow">Frontend + UI</span>
+              <span class="eyebrow">Full Stack</span>
               <h3>Ticket Flow</h3>
               <div class="project-card__media">
                 <img
@@ -191,12 +228,8 @@
                 />
               </div>
               <p>
-                SaaS de gestión de incidencias pensado para técnicos y pequeñas
-                empresas, centralizando tickets, prioridades, seguimiento y
-                responsables en una sola plataforma. Este proyecto refleja un
-                caso de uso empresarial real y demuestra desarrollo full stack,
-                roles, automatizaciones, dashboard e integraciones de alto valor
-                para un entorno profesional.
+                SaaS de incidencias para centralizar tickets, prioridades y
+                seguimiento tecnico en una sola plataforma.
               </p>
 
               <ul class="tag-list">
@@ -213,8 +246,8 @@
               <span class="eyebrow">Backend + Datos</span>
               <h3>Gestor de tareas con API</h3>
               <p>
-                Aplicacion para organizar tareas con operaciones CRUD,
-                validaciones y conexion entre cliente, servidor y base de datos.
+                Aplicacion CRUD conectada a API y base de datos para gestionar
+                tareas de forma clara.
               </p>
               <ul class="tag-list">
                 <li>Node.js</li>
@@ -230,8 +263,8 @@
               <span class="eyebrow">Full Stack</span>
               <h3>Panel de catalogo digital</h3>
               <p>
-                Proyecto orientado a mostrar productos o contenido dinamico con
-                filtros, estructura reutilizable y panel visual claro.
+                Panel visual para mostrar contenido dinamico con filtros y una
+                estructura reutilizable.
               </p>
               <ul class="tag-list">
                 <li>React</li>
@@ -322,7 +355,11 @@
               </div>
             </article>
 
-            <form class="contact-form" action="../backend/handlers/insertar.php" method="post">
+            <form
+              class="contact-form"
+              action="../backend/handlers/insertar.php"
+              method="post"
+            >
               <label for="nombre">Nombre</label>
               <input
                 type="text"
